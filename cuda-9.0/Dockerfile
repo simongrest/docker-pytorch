@@ -65,6 +65,32 @@ RUN conda install -y graphviz=2.38.0 \
  && conda clean -ya
 RUN pip install graphviz==0.8.4
 
+# Install Fastai
+RUN conda install -y fastai \
+ && conda clean -ya
+RUN pip install fastai
+
+# Install wheel
+RUN conda install -y wheel \
+ && conda clean -ya
+RUN pip install wheel
+
+# Install pandas
+RUN conda install -y pandas \
+ && conda clean -ya
+RUN pip install pandas
+
+# Install torchvision
+RUN conda install -y torchvision \
+ && conda clean -ya
+RUN pip install torchvision
+
+
+# Install Fastai
+RUN conda install -y joblib \
+ && conda clean -ya
+RUN pip install joblib
+
 # Install OpenCV3 Python bindings
 RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
     libgtk2.0-0 \
